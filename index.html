@@ -2,22 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Hand Energy Effect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Nano Machine Cultivator AR</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- MediaPipe Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <!-- MediaPipe Core Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-        <!-- Hidden video element to capture webcam -->
-        <video class="input_video"></video>
-        <!-- Canvas to draw the video and the AR effects -->
-        <canvas class="output_canvas" width="1280" height="720"></canvas>
+        <!-- Critical attributes for iOS mobile compatibility -->
+        <video class="input_video" autoplay playsinline muted></video>
+        <canvas class="output_canvas"></canvas>
+        <div class="scanline"></div>
     </div>
     
     <script src="script.js"></script>
